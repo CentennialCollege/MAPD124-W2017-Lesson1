@@ -10,15 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var appLabel: UILabel!
+    
+    // this method is the Action method for both buttons
+    // in the UI
+    @IBAction func buttonTouched(_ sender: UIButton) {
+        
+     appLabel.text = "\(sender.currentTitle!) Touched"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 
 }
